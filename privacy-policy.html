@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AppLens Privacy Policy</title>
+<meta name="description" content="Privacy policy for AppLens, an on-device Android app inspector. AppLens has no internet access and does not collect or share personal data.">
+<meta name="robots" content="index, follow">
+<style>
+  :root {
+    --bg: #121212;
+    --glow: #1a2120;
+    --surface: #1c1c1c;
+    --surface-top: #232525;
+    --border: #2a2a2a;
+    --text: #ededed;
+    --muted: #a0a0a0;
+    --faint: #6c6c6c;
+    --accent: #8fd8cb;
+    --accent-soft: rgba(143, 216, 203, 0.14);
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f6f7f7;
+      --glow: #e4f1ee;
+      --surface: #ffffff;
+      --surface-top: #fbfcfc;
+      --border: #e3e5e5;
+      --text: #1a1c1c;
+      --muted: #555a5a;
+      --faint: #8a8f8f;
+      --accent: #1f7a6c;
+      --accent-soft: rgba(31, 122, 108, 0.10);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: linear-gradient(180deg, var(--glow) 0, var(--bg) 420px) no-repeat, var(--bg);
+    color: var(--text);
+    font: 16px/1.6 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 16px 64px; }
+
+  header.hero {
+    padding: 28px 24px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: linear-gradient(135deg, var(--accent-soft), var(--surface) 60%);
+    margin-bottom: 20px;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  .brand svg { flex: none; }
+  .brand span { font-weight: 700; font-size: 15px; color: var(--muted); letter-spacing: 0.02em; }
+  h1 { font-size: clamp(28px, 6vw, 38px); line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 10px; }
+  .lead { color: var(--muted); margin: 0 0 16px; font-size: 17px; }
+  .meta { font-size: 14px; font-weight: 600; color: var(--accent); margin: 0; }
+
+  .summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+  }
+  .summary li {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--surface-top), var(--surface));
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .summary strong { display: block; color: var(--text); font-size: 15px; margin-bottom: 2px; }
+
+  section {
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--surface-top), var(--surface));
+    padding: 20px 22px;
+    margin-bottom: 12px;
+  }
+  h2 { font-size: 19px; letter-spacing: -0.01em; margin: 0 0 10px; }
+  p, li { color: var(--muted); }
+  p { margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+  ul { margin: 0; padding-left: 20px; }
+  li { margin: 6px 0; }
+  li::marker { color: var(--accent); }
+  strong { color: var(--text); font-weight: 600; }
+
+  dl { margin: 0; }
+  dt { color: var(--text); font-weight: 600; margin-top: 12px; }
+  dt:first-child { margin-top: 0; }
+  dd { margin: 2px 0 0; color: var(--muted); }
+  code {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.85em;
+    color: var(--faint);
+    overflow-wrap: anywhere;
+  }
+
+  .note {
+    margin-top: 12px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    color: var(--muted);
+    font-size: 14px;
+  }
+  a { color: var(--accent); font-weight: 600; text-decoration: none; }
+  a:hover, a:focus-visible { text-decoration: underline; }
+  footer { text-align: center; color: var(--faint); font-size: 13px; margin-top: 28px; }
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <div class="brand">
+      <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+        <rect width="36" height="36" rx="11" fill="var(--accent-soft)"/>
+        <path d="M18 8.5l7.5 3v5.6c0 4.7-3.1 8.9-7.5 10.4-4.4-1.5-7.5-5.7-7.5-10.4v-5.6l7.5-3z" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="18" cy="17" r="2.6" fill="none" stroke="var(--accent)" stroke-width="2"/>
+      </svg>
+      <span>AppLens</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="lead">Your data stays on your device. AppLens has no internet access, no accounts and no tracking. It only reads what it needs to inspect the apps on your phone.</p>
+    <p class="meta">Effective 29 September 2026</p>
+  </header>
+
+  <ul class="summary" aria-label="Summary">
+    <li><strong>No data collected</strong>Nothing is sent to us or to third parties.</li>
+    <li><strong>No internet access</strong>The app does not request the Internet permission.</li>
+    <li><strong>No ads or analytics</strong>No SDKs that track you.</li>
+    <li><strong>On-device only</strong>All analysis runs on your phone.</li>
+  </ul>
+
+  <section>
+    <h2>About this policy</h2>
+    <p>This policy explains how the AppLens Android app (package <code>com.applens.applens</code>) handles information. AppLens is an app inspector: it shows technical details about the apps installed on your device and checks them for patterns commonly used by fraud apps.</p>
+  </section>
+
+  <section>
+    <h2>What AppLens reads</h2>
+    <ul>
+      <li>The list of apps installed on your device, and their details: name, package name, version, size, install and update dates, permissions, components, signing certificate and manifest.</li>
+      <li>APK files you choose to open with AppLens, or that appear in folders you ask it to watch.</li>
+      <li>Only if you grant Usage access: when each app was last used, its foreground time and its storage size.</li>
+      <li>Whether other apps have special access such as Accessibility, device admin, notification access or permission to install unknown apps.</li>
+    </ul>
+    <p class="note">AppLens needs to see all installed apps because inspecting and checking them is its core purpose. It does not read your messages, contacts, photos, location, call logs or accounts.</p>
+  </section>
+
+  <section>
+    <h2>Where it is processed</h2>
+    <ul>
+      <li>All analysis and risk checks run entirely on your device.</li>
+      <li>AppLens does not request the Internet permission, so it cannot send data to us or to anyone else.</li>
+      <li>There are no accounts, advertising, analytics or crash-reporting services in the app.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What is stored on your device</h2>
+    <ul>
+      <li>Your settings: whether protection is on, the folders you chose to watch, apps you marked as trusted, and the time of the last check.</li>
+      <li>A short list of APK files found in watched folders, with their check result.</li>
+      <li>Temporary copies of APK files and exported reports while they are being checked or shared. These are kept in the app cache.</li>
+    </ul>
+    <p class="note">All of this is private to AppLens and is deleted when you clear the app's storage or uninstall it. We have no copy of it.</p>
+  </section>
+
+  <section>
+    <h2>When data leaves your device</h2>
+    <ul>
+      <li>Only when you choose to save or share a report (PDF, JSON, CSV or copied text). You pick the destination, and the app you share it with handles the file under its own privacy policy.</li>
+      <li>We never sell, rent or share your data, because we never receive it.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Permissions and why they are used</h2>
+    <dl>
+      <dt>See all installed apps <code>QUERY_ALL_PACKAGES</code></dt>
+      <dd>To list, inspect and risk-check the apps on your device. This is the core function of AppLens.</dd>
+      <dt>Usage access, optional <code>PACKAGE_USAGE_STATS</code></dt>
+      <dd>To show last-used time, screen time and storage for an app. You grant it in Android Settings and can turn it off at any time.</dd>
+      <dt>Notifications <code>POST_NOTIFICATIONS</code></dt>
+      <dd>To warn you when a risky app is installed or a risky APK file appears.</dd>
+      <dt>Run at startup <code>RECEIVE_BOOT_COMPLETED</code></dt>
+      <dd>To keep background checks scheduled after your phone restarts.</dd>
+      <dt>Request uninstall <code>REQUEST_DELETE_PACKAGES</code></dt>
+      <dd>To open the Android uninstall screen when you tap Uninstall. Android always asks you to confirm.</dd>
+      <dt>Folders you pick</dt>
+      <dd>To look for new APK files in folders you select using the Android folder picker. AppLens cannot see any other files.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Your choices</h2>
+    <ul>
+      <li>Turn off protection on the Protection tab to stop background checks and warnings.</li>
+      <li>Remove watched folders in the app, or revoke Usage access or notifications in Android Settings.</li>
+      <li>Clear the app's storage, or uninstall it, to delete everything it saved.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Security</h2>
+    <p>Because AppLens keeps data in its private app storage and has no network access, your information is protected by Android's app sandbox. Files are only shared outside the app when you explicitly save or share them.</p>
+  </section>
+
+  <section>
+    <h2>Important notes</h2>
+    <ul>
+      <li>AppLens is not a malware scanner. A flagged app is not proven malicious, and an app with no flags is not proven safe. Keep Google Play Protect turned on.</li>
+      <li>Helpline numbers and websites mentioned in the app are public government services. AppLens is not affiliated with any government, bank or app developer.</li>
+      <li>AppLens is not directed at children under 13 and does not knowingly process children's data.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the updated version will be published on this page and in the app with a new effective date.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Questions about this policy or your privacy? Email <a href="mailto:app.solo.mayur@gmail.com">app.solo.mayur@gmail.com</a>.</p>
+  </section>
+
+  <footer>© 2026 AppLens</footer>
+</main>
+</body>
+</html>

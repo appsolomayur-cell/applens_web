@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>AppLens – Powerful Android App Inspector & APK Analyzer | 100% Offline</title>
+  <meta name="title" content="AppLens – Powerful Android App Inspector & APK Analyzer | 100% Offline">
+  <meta name="description" content="Inspect installed apps, analyze APK signatures, evaluate privacy risk scores, and detect app frameworks (Flutter, React Native, Unity). 100% on-device with zero internet permission.">
+  <meta name="keywords" content="app inspector, apk analyzer, check app permissions, permission checker, scan apk, privacy guard, flutter app detector, target sdk checker, manifest viewer, apk signature, android developer tools">
+  <meta name="author" content="Mayur">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://applens.dev/">
+  <meta property="og:title" content="AppLens – Android App Inspector & APK Analyzer">
+  <meta property="og:description" content="Check app permissions, scan APKs & find risky apps. 100% offline, zero internet, zero trackers.">
+  <meta property="og:image" content="assets/images/screenshot-01.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="AppLens – Android App Inspector & APK Analyzer">
+  <meta property="twitter:description" content="Check app permissions, scan APKs & find risky apps. 100% offline, zero internet.">
+  <meta property="twitter:image" content="assets/images/screenshot-01.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/app-logo.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JSON-LD Structured Data for Software Application -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AppLens: App Inspector & APK",
+    "operatingSystem": "Android",
+    "applicationCategory": "DeveloperApplication, SecurityApplication, UtilitiesApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "AppLens is an app inspector and APK analyzer that shows you what every app on your phone can really do. 100% offline with zero internet permission.",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "1250"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Ambient Glow Backgrounds -->
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+    <div class="bg-grid"></div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand-logo" aria-label="AppLens Home">
+        <div class="brand-icon-wrapper">
+          <img src="assets/images/app-logo.png" alt="AppLens Logo" width="40" height="40">
+        </div>
+        <div class="brand-text">App<span>Lens</span></div>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#interactive-tools" class="nav-link">Live Inspector</a>
+        <a href="#screenshots" class="nav-link">Screenshots</a>
+        <a href="#privacy" class="nav-link">Privacy Guarantee</a>
+        <a href="#pricing" class="nav-link">Pro Edition</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <svg class="icon-sun" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <!-- CTA Button -->
+        <a href="https://play.google.com/store/apps/details?id=com.applens" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3.609 1.814L13.792 12 3.61 22.186a2.38 2.38 0 01-.61-1.64V3.454c0-.623.228-1.206.609-1.64zm11.597 11.598l2.585 2.586-13.37 7.72c-.146.084-.3.14-.457.172l11.242-10.478zm2.585-2.824L20.47 12l-2.679 1.412-2.39-2.39 2.39-2.434zM3.965 2.128L15.206 10.6 12.62 13.186 3.965 2.128z"/>
+          </svg>
+          Get on Play Store
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button id="mobile-toggle-btn" class="mobile-toggle-btn" aria-label="Toggle Navigation Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+    <div class="mobile-nav-links">
+      <a href="#features" class="nav-link">✨ Features</a>
+      <a href="#interactive-tools" class="nav-link">🧪 Live Inspector</a>
+      <a href="#screenshots" class="nav-link">📱 App Screenshots</a>
+      <a href="#privacy" class="nav-link">🛡️ Privacy Pledge</a>
+      <a href="#pricing" class="nav-link">💎 AppLens Pro</a>
+      <a href="#faq" class="nav-link">❓ Questions & Answers</a>
+      <a href="privacy-policy.html" class="nav-link">📜 Privacy Policy</a>
+    </div>
+    <div style="margin-top: 24px;">
+      <a href="https://play.google.com/store/apps/details?id=com.applens" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+        Download on Google Play
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="tag-status-dot"></span>
+          <span>v1.0.0 Live on Google Play • 100% Offline • No Trackers</span>
+        </div>
+
+        <h1 class="hero-title">
+          See What Your Apps <br>
+          <span class="gradient-text">Can Really Do.</span>
+        </h1>
+
+        <p class="hero-description">
+          The ultimate on-device Android App Inspector & APK Analyzer. Uncover secret permissions, audit uninstalled APKs, calculate privacy risk scores, and detect app frameworks — with zero internet connection required.
+        </p>
+
+        <div class="hero-cta-group">
+          <!-- Play Store Badge -->
+          <a href="https://play.google.com/store/apps/details?id=com.applens" target="_blank" rel="noopener noreferrer" class="btn-playstore" id="hero-playstore-btn">
+            <svg class="btn-playstore-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3.609 1.814L13.792 12 3.61 22.186a2.38 2.38 0 01-.61-1.64V3.454c0-.623.228-1.206.609-1.64zm11.597 11.598l2.585 2.586-13.37 7.72c-.146.084-.3.14-.457.172l11.242-10.478zm2.585-2.824L20.47 12l-2.679 1.412-2.39-2.39 2.39-2.434zM3.965 2.128L15.206 10.6 12.62 13.186 3.965 2.128z"/>
+            </svg>
+            <div class="btn-playstore-text">
+              <span class="subtitle">GET IT ON</span>
+              <span class="title">Google Play</span>
+            </div>
+          </a>
+
+          <!-- QR Code Trigger -->
+          <button class="qr-scan-preview open-qr-modal" title="Scan QR Code to install on mobile">
+            <svg class="qr-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+            </svg>
+            <span>Scan to Install</span>
+          </button>
+
+          <a href="#interactive-tools" class="btn btn-secondary">
+            Try Live Demo
+          </a>
+        </div>
+
+        <!-- Trust Stats Bar -->
+        <div class="hero-trust-bar">
+          <div class="trust-item">
+            <span class="trust-number counter-animate" data-target="100" data-suffix="%">100%</span>
+            <span class="trust-label">Offline & Private</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-number counter-animate" data-target="0">0</span>
+            <span class="trust-label">Trackers or Ads</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-number counter-animate" data-target="4.8" data-suffix="★">4.8★</span>
+            <span class="trust-label">User Rating</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-number counter-animate" data-target="70" data-suffix="+">70+</span>
+            <span class="trust-label">Security Checks</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Phone Mockup Visual -->
+      <div class="hero-visual-wrapper">
+        <div class="mockup-glow"></div>
+
+        <div class="phone-mockup">
+          <div class="phone-camera-cutout"></div>
+          <div class="phone-screen">
+            <img src="assets/images/screenshot-01.png" alt="AppLens Dashboard on Android Phone" width="280" height="606" loading="eager">
+          </div>
+        </div>
+
+        <!-- Floating Badge 1 -->
+        <div class="floating-badge badge-top-left">
+          <div class="floating-badge-icon emerald">🛡️</div>
+          <div class="floating-badge-text">
+            <span class="floating-badge-title">Risk Score: Low</span>
+            <span class="floating-badge-desc">Zero sensitive leaks</span>
+          </div>
+        </div>
+
+        <!-- Floating Badge 2 -->
+        <div class="floating-badge badge-mid-right">
+          <div class="floating-badge-icon cyan">⚡</div>
+          <div class="floating-badge-text">
+            <span class="floating-badge-title">Flutter 3.x Detected</span>
+            <span class="floating-badge-desc">Impeller & Dart AOT</span>
+          </div>
+        </div>
+
+        <!-- Floating Badge 3 -->
+        <div class="floating-badge badge-bottom-right">
+          <div class="floating-badge-icon indigo">🔒</div>
+          <div class="floating-badge-text">
+            <span class="floating-badge-title">100% On-Device</span>
+            <span class="floating-badge-desc">No INTERNET permission</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Features Section -->
+  <section id="features" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Comprehensive Toolkit</div>
+        <h2 class="section-title">Engineered for Privacy Enthusiasts & Android Developers</h2>
+        <p class="section-subtitle">
+          Everything you need to audit apps, inspect raw APK binaries, identify frameworks, and maintain total control over your Android device.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1: Installed App Inspector -->
+        <div class="feature-card highlight">
+          <div>
+            <div class="feature-icon-box">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Inspect Any Installed App in Seconds</h3>
+            <p class="feature-desc">
+              Look under the hood of every system and third-party app. View exact package name, version codes, install dates, installer source, storage breakdown, activities, exported services, broadcast receivers, and intent filters in clean plain English.
+            </p>
+            <div class="feature-tags">
+              <span class="feature-tag-chip">Target & Min SDK</span>
+              <span class="feature-tag-chip">Manifest Decoded</span>
+              <span class="feature-tag-chip">Exported Components</span>
+            </div>
+          </div>
+          <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-card);">
+            <img src="assets/images/screenshot-05.png" alt="App Components and Manifest Inspector" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Feature 2: Standalone APK Analyzer -->
+        <div class="feature-card">
+          <div class="feature-icon-box" style="background: var(--cyan-soft); color: var(--cyan); border-color: rgba(6, 182, 212, 0.3);">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Scan APKs Before Installing</h3>
+          <p class="feature-desc">
+            Never install an untrusted APK blindly. AppLens inspects raw APK/XAPK files directly from your Downloads folder, verifying certificate signatures (v1 to v4 schemes) and SHA-256 fingerprints before you tap install.
+          </p>
+          <div class="feature-tags">
+            <span class="feature-tag-chip">Signature v1-v4</span>
+            <span class="feature-tag-chip">Key Rotation</span>
+            <span class="feature-tag-chip">SHA-256 Hash</span>
+          </div>
+        </div>
+
+        <!-- Feature 3: Framework Detector -->
+        <div class="feature-card">
+          <div class="feature-icon-box" style="background: rgba(99, 102, 241, 0.12); color: var(--indigo); border-color: rgba(99, 102, 241, 0.3);">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Instant Framework Detector</h3>
+          <p class="feature-desc">
+            Curious how popular apps are engineered? AppLens scans binaries for underlying frameworks: Flutter, React Native, Unity, Kotlin / Jetpack Compose, Xamarin/.NET, Godot, or Unreal Engine.
+          </p>
+          <div class="feature-tags">
+            <span class="feature-tag-chip">Flutter</span>
+            <span class="feature-tag-chip">React Native</span>
+            <span class="feature-tag-chip">Jetpack Compose</span>
+          </div>
+        </div>
+
+        <!-- Feature 4: Permission & Risk Score -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Dynamic Risk Score & Alerts</h3>
+          <p class="feature-desc">
+            Automated security scoring flags apps requesting dangerous access: Camera, Microphone, Read SMS, Background Location, Device Admin, or Accessibility Services. Spot suspicious apps immediately.
+          </p>
+          <div class="feature-tags">
+            <span class="feature-tag-chip">Risk Meter 0-100</span>
+            <span class="feature-tag-chip">Sideload Alerts</span>
+          </div>
+        </div>
+
+        <!-- Feature 5: Real-time Protection Monitor -->
+        <div class="feature-card">
+          <div class="feature-icon-box" style="background: var(--amber-soft); color: var(--amber); border-color: rgba(245, 158, 11, 0.3);">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Protection & Folder Watcher</h3>
+          <p class="feature-desc">
+            Get instant notifications whenever a new app is installed on your device or when a downloaded APK lands in your Downloads directory. Check risks with a single tap before launching.
+          </p>
+          <div class="feature-tags">
+            <span class="feature-tag-chip">Folder Watcher</span>
+            <span class="feature-tag-chip">Install Intercept</span>
+          </div>
+        </div>
+
+        <!-- Feature 6: PDF Audit Report Export -->
+        <div class="feature-card">
+          <div class="feature-icon-box" style="background: rgba(56, 189, 248, 0.12); color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Export Clean PDF Security Reports</h3>
+          <p class="feature-desc">
+            Generate printable, beautifully formatted PDF audit reports containing detailed security findings, certificate fingerprints, permission matrix, and library trees for work, audits, or sharing.
+          </p>
+          <div class="feature-tags">
+            <span class="feature-tag-chip">PDF Generator</span>
+            <span class="feature-tag-chip">Audit Ready</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Live Tools Section -->
+  <section id="interactive-tools" class="section interactive-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Try It Live In Browser</div>
+        <h2 class="section-title">Experience How AppLens Analyzes Risk</h2>
+        <p class="section-subtitle">
+          Test our risk scoring algorithm right now or simulate how AppLens reverse-engineers framework fingerprints.
+        </p>
+      </div>
+
+      <div class="interactive-card">
+        <!-- Interactive Tabs -->
+        <div class="interactive-tabs">
+          <button class="tab-btn active" data-tab="tab-risk" onclick="switchInteractiveTab('tab-risk')">
+            🛡️ Live Permission Risk Calculator
+          </button>
+          <button class="tab-btn" data-tab="tab-framework" onclick="switchInteractiveTab('tab-framework')">
+            🧩 Framework Inspector Simulator
+          </button>
+        </div>
+
+        <!-- Tab 1: Live Risk Calculator -->
+        <div id="tab-risk" class="tab-panel active">
+          <div class="calculator-layout">
+            <!-- Left: Switches -->
+            <div class="permission-list">
+              <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">
+                Toggle Sensitive Permissions to Calculate Risk Score:
+              </div>
+
+              <!-- Item 1: Camera -->
+              <div class="permission-item checked" data-weight="15">
+                <div class="permission-item-info">
+                  <div class="perm-icon">📷</div>
+                  <div>
+                    <span class="perm-title">Camera Access</span>
+                    <span class="perm-id">android.permission.CAMERA</span>
+                  </div>
+                </div>
+                <div class="custom-switch"></div>
+              </div>
+
+              <!-- Item 2: Background Location -->
+              <div class="permission-item checked" data-weight="25">
+                <div class="permission-item-info">
+                  <div class="perm-icon">📍</div>
+                  <div>
+                    <span class="perm-title">Background GPS Location</span>
+                    <span class="perm-id">ACCESS_BACKGROUND_LOCATION</span>
+                  </div>
+                </div>
+                <div class="custom-switch"></div>
+              </div>
+
+              <!-- Item 3: Read SMS -->
+              <div class="permission-item" data-weight="30">
+                <div class="permission-item-info">
+                  <div class="perm-icon">💬</div>
+                  <div>
+                    <span class="perm-title">Read SMS / OTP Messages</span>
+                    <span class="perm-id">android.permission.READ_SMS</span>
+                  </div>
+                </div>
+                <div class="custom-switch"></div>
+              </div>
+
+              <!-- Item 4: Query All Packages -->
+              <div class="permission-item" data-weight="20">
+                <div class="permission-item-info">
+                  <div class="perm-icon">📱</div>
+                  <div>
+                    <span class="perm-title">Query All Installed Packages</span>
+                    <span class="perm-id">QUERY_ALL_PACKAGES</span>
+                  </div>
+                </div>
+                <div class="custom-switch"></div>
+              </div>
+
+              <!-- Item 5: Accessibility Service -->
+              <div class="permission-item" data-weight="35">
+                <div class="permission-item-info">
+                  <div class="perm-icon">⚙️</div>
+                  <div>
+                    <span class="perm-title">Accessibility Service (Keylogger Risk)</span>
+                    <span class="perm-id">BIND_ACCESSIBILITY_SERVICE</span>
+                  </div>
+                </div>
+                <div class="custom-switch"></div>
+              </div>
+            </div>
+
+            <!-- Right: Dynamic Gauge Meter -->
+            <div class="risk-meter-box">
+              <div class="gauge-container">
+                <svg class="gauge-svg" viewBox="0 0 160 160">
+                  <circle class="gauge-bg" cx="80" cy="80" r="70" />
+                  <circle id="gauge-fill-circle" class="gauge-fill" cx="80" cy="80" r="70" />
+                </svg>
+                <div class="gauge-center-text">
+                  <span id="risk-score-val" class="gauge-score">40</span>
+                  <span class="gauge-label">Risk Index</span>
+                </div>
+              </div>
+
+              <span id="risk-status-badge" class="risk-status-badge risk-moderate">MODERATE PRIVILEGE</span>
+              <p id="risk-advice-text" class="risk-meter-advice">
+                App requests sensitive capabilities (Camera, Location). Keep an eye on background battery and sensor alerts.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Framework Simulator -->
+        <div id="tab-framework" class="tab-panel">
+          <div style="text-align: center; margin-bottom: 24px;">
+            <p style="color: var(--text-sub); margin-bottom: 14px;">Select an app technology to preview AppLens signature breakdown:</p>
+            <div class="framework-selector">
+              <span class="framework-chip active" data-framework="flutter">Flutter</span>
+              <span class="framework-chip" data-framework="reactnative">React Native</span>
+              <span class="framework-chip" data-framework="kotlin">Native Kotlin / Compose</span>
+              <span class="framework-chip" data-framework="unity">Unity 3D Engine</span>
+              <span class="framework-chip" data-framework="unreal">Unreal Engine</span>
+            </div>
+          </div>
+
+          <div class="framework-output-card">
+            <div class="code-line">
+              <span class="code-key">// Framework:</span>
+              <span class="code-val" id="sim-framework-name">Flutter (Google)</span>
+            </div>
+            <div class="code-line">
+              <span class="code-key">// Engine / JNI:</span>
+              <span class="code-val" id="sim-runtime-engine">Dart AOT / Impeller &amp; Skia Renderer</span>
+            </div>
+            <div class="code-line">
+              <span class="code-key">// Native Libs:</span>
+              <span class="code-val" id="sim-native-lib">libflutter.so, libapp.so (arm64-v8a)</span>
+            </div>
+            <div class="code-line">
+              <span class="code-key">// Entry Point:</span>
+              <span class="code-val" id="sim-manifest-class">io.flutter.embedding.android.FlutterActivity</span>
+            </div>
+            <div class="code-line">
+              <span class="code-key">// Android Target:</span>
+              <span class="code-val" id="sim-target-sdk">Android 15 (Target SDK 35, Min SDK 21)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots Gallery Section -->
+  <section id="screenshots" class="section screenshots-gallery-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Visual Experience</div>
+        <h2 class="section-title">Designed for Modern Android</h2>
+        <p class="section-subtitle">
+          Sleek dark theme, clean Material 3 design, intuitive summaries, and effortless navigation.
+        </p>
+      </div>
+
+      <div class="carousel-container">
+        <div id="carousel-track" class="carousel-track-wrapper">
+          <!-- Slide 1 -->
+          <div class="screenshot-slide">
+            <img src="assets/images/screenshot-01.png" alt="App Overview Dashboard" loading="lazy">
+            <div class="screenshot-caption">Inspect Every App on Device</div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="screenshot-slide">
+            <img src="assets/images/screenshot-02.png" alt="Permission Checker & Risk Score" loading="lazy">
+            <div class="screenshot-caption">Permission Checker &amp; Risk Score</div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="screenshot-slide">
+            <img src="assets/images/screenshot-03.png" alt="APK Scanner Pre-install" loading="lazy">
+            <div class="screenshot-caption">Scan APK Files Before Installing</div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="screenshot-slide">
+            <img src="assets/images/screenshot-04.png" alt="Framework Detector" loading="lazy">
+            <div class="screenshot-caption">Detect Flutter, React Native, Unity</div>
+          </div>
+          <!-- Slide 5 -->
+          <div class="screenshot-slide">
+            <img src="assets/images/screenshot-05.png" alt="Manifest & Components Viewer" loading="lazy">
+            <div class="screenshot-caption">Manifest, SDK &amp; Signature Viewer</div>
+          </div>
+          <!-- Slide 6 -->
+          <div class="screenshot-slide">
+            <img src="assets/images/screenshot-06.png" alt="Instant Alerts on New Apps" loading="lazy">
+            <div class="screenshot-caption">Alerts for New Apps &amp; APKs</div>
+          </div>
+          <!-- Slide 7 -->
+          <div class="screenshot-slide">
+            <img src="assets/images/screenshot-07.png" alt="Export PDF Security Reports" loading="lazy">
+            <div class="screenshot-caption">Export Full PDF Reports</div>
+          </div>
+          <!-- Slide 8 -->
+          <div class="screenshot-slide">
+            <img src="assets/images/screenshot-08.png" alt="100% Offline No Ads" loading="lazy">
+            <div class="screenshot-caption">100% Offline — No Internet, No Ads</div>
+          </div>
+          <!-- Slide 9 -->
+          <div class="screenshot-slide">
+            <img src="assets/images/screenshot-09.png" alt="Storage and Cache Analyzer" loading="lazy">
+            <div class="screenshot-caption">Storage &amp; Deep Cache Details</div>
+          </div>
+          <!-- Slide 10 -->
+          <div class="screenshot-slide">
+            <img src="assets/images/screenshot-10.png" alt="APK Folder Watcher" loading="lazy">
+            <div class="screenshot-caption">Watch Downloads Folder</div>
+          </div>
+        </div>
+
+        <!-- Carousel Navigation Controls -->
+        <div class="carousel-controls">
+          <button id="carousel-prev" class="carousel-nav-btn" aria-label="Previous Screenshot">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <div id="carousel-dots" class="carousel-dots"></div>
+          <button id="carousel-next" class="carousel-nav-btn" aria-label="Next Screenshot">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshot Lightbox Modal -->
+  <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true">
+    <div class="lightbox-content">
+      <button id="lightbox-close" class="lightbox-close-btn" aria-label="Close Lightbox">&times;</button>
+      <img id="lightbox-img" src="" alt="Enlarged Screenshot">
+    </div>
+  </div>
+
+  <!-- Privacy & Zero-Network Proof Section -->
+  <section id="privacy" class="section">
+    <div class="container">
+      <div class="privacy-pledge-card">
+        <div>
+          <div class="section-badge" style="background: var(--emerald-soft); color: var(--emerald);">100% Math-Proof Privacy</div>
+          <h2 class="section-title" style="margin-bottom: 16px;">We Don't Ask for Internet Permission. Period.</h2>
+          <p style="color: var(--text-sub); line-height: 1.7; margin-bottom: 20px;">
+            Most "privacy apps" paradoxically request full internet access to upload your device statistics and app inventories to remote servers.
+          </p>
+          <p style="color: var(--text-sub); line-height: 1.7; margin-bottom: 24px;">
+            AppLens is strictly hardcoded with <strong>zero internet permissions</strong>. It is technically impossible for the app to send your data, contacts, or APK signatures to the cloud. Everything executes in isolated memory directly on your CPU.
+          </p>
+
+          <ul style="display: flex; flex-direction: column; gap: 10px;">
+            <li style="display: flex; align-items: center; gap: 10px; color: var(--text-main); font-weight: 500;">
+              <span style="color: var(--emerald);">✓</span> No account or login required
+            </li>
+            <li style="display: flex; align-items: center; gap: 10px; color: var(--text-main); font-weight: 500;">
+              <span style="color: var(--emerald);">✓</span> Zero advertising SDKs (No AdMob, No UnityAds)
+            </li>
+            <li style="display: flex; align-items: center; gap: 10px; color: var(--text-main); font-weight: 500;">
+              <span style="color: var(--emerald);">✓</span> Zero third-party trackers (No Firebase Analytics, No AppsFlyer)
+            </li>
+          </ul>
+        </div>
+
+        <!-- Android Manifest Code Proof -->
+        <div class="manifest-block">
+          <div class="manifest-header">
+            <span>AndroidManifest.xml (AppLens)</span>
+            <span style="color: var(--emerald); font-weight: 600;">Verified Offline</span>
+          </div>
+          <div class="manifest-code">
+            <span class="comment">&lt;!-- Verified Android Permissions --&gt;</span><br>
+            &lt;uses-permission android:name="QUERY_ALL_PACKAGES" /&gt;<br>
+            &lt;uses-permission android:name="POST_NOTIFICATIONS" /&gt;<br>
+            <br>
+            <span class="comment">&lt;!-- Notice what is MISSING below: --&gt;</span><br>
+            <span style="color: var(--rose); text-decoration: line-through;">&lt;uses-permission android:name="android.permission.INTERNET" /&gt;</span><br>
+            <span class="highlight-zero">&gt; 0% Network Outbound Allowed by Android OS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing & AppLens Pro Comparison Section -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Choose Your Superpower</div>
+        <h2 class="section-title">Transparent &amp; Fair. Forever.</h2>
+        <p class="section-subtitle">
+          Start 100% free with complete app inspection tools, or upgrade to AppLens Pro for advanced power-user firewalling and bloatware control.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Tier 1: Free -->
+        <div class="pricing-card">
+          <h3 class="pricing-tier-name">AppLens Standard</h3>
+          <div class="pricing-price">
+            <span class="pricing-amount">Free</span>
+            <span class="pricing-period">/ Lifetime</span>
+          </div>
+          <p class="pricing-desc">
+            Essential on-device inspection for every Android user wanting complete privacy visibility.
+          </p>
+
+          <div class="pricing-features-list">
+            <div class="pricing-feature-item included">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>Inspect all installed apps &amp; components</span>
+            </div>
+            <div class="pricing-feature-item included">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>Scan uninstalled APK files in Downloads</span>
+            </div>
+            <div class="pricing-feature-item included">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>Signature check (v1, v2, v3, v4) &amp; SHA-256</span>
+            </div>
+            <div class="pricing-feature-item included">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>Tech framework detector (Flutter, React, Unity)</span>
+            </div>
+            <div class="pricing-feature-item included">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>Permission risk score &amp; alerts</span>
+            </div>
+            <div class="pricing-feature-item included">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>PDF report generator &amp; export</span>
+            </div>
+            <div class="pricing-feature-item excluded">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              <span>Per-app local firewall blocker</span>
+            </div>
+            <div class="pricing-feature-item excluded">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              <span>Shizuku bloatware freezer &amp; downgrader</span>
+            </div>
+          </div>
+
+          <a href="https://play.google.com/store/apps/details?id=com.applens" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+            Install Free Version
+          </a>
+        </div>
+
+        <!-- Tier 2: Pro -->
+        <div class="pricing-card popular">
+          <div class="popular-badge">Power User Edition</div>
+          <h3 class="pricing-tier-name">AppLens Pro</h3>
+          <div class="pricing-price">
+            <span class="pricing-amount">₹99</span>
+            <span class="pricing-period">/ Single One-Time Purchase</span>
+          </div>
+          <p class="pricing-desc">
+            The complete suite for developers, power users, and deep system privacy audits.
+          </p>
+
+          <div class="pricing-features-list">
+            <div class="pricing-feature-item included">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>Everything in Free Standard edition</span>
+            </div>
+            <div class="pricing-feature-item included">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span><strong>App-Specific Internet Blocker</strong> (Local Firewall)</span>
+            </div>
+            <div class="pricing-feature-item included">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span><strong>Hidden Tracker &amp; Ad-Network Detector</strong></span>
+            </div>
+            <div class="pricing-feature-item included">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span><strong>XAPK &amp; Split APKs Direct Installer</strong></span>
+            </div>
+            <div class="pricing-feature-item included">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span><strong>Shizuku Bloatware Freezer &amp; App Downgrade</strong></span>
+            </div>
+            <div class="pricing-feature-item included">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span><strong>APK Version Diff Tool</strong> (Compare permission changes)</span>
+            </div>
+            <div class="pricing-feature-item included">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>True AMOLED Pure Black Theme &amp; JSON Exports</span>
+            </div>
+          </div>
+
+          <a href="https://play.google.com/store/apps/details?id=com.applens" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+            Get AppLens Pro
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Help &amp; Clarity</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Straight answers about security, system permissions, and offline functionality.
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <!-- Question 1 -->
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>Why does AppLens not have the INTERNET permission?</span>
+            <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            To guarantee absolute privacy. Android security enforces permissions at the kernel level. Without the <code>android.permission.INTERNET</code> declaration, it is mathematically impossible for AppLens to transmit any data off your device. All app scanning and decompilation runs purely in local CPU memory.
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Why does AppLens request "Query All Packages"?</span>
+            <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Starting in Android 11, Google introduced package visibility restrictions. An app manager cannot see installed applications without the <code>QUERY_ALL_PACKAGES</code> permission. AppLens uses this exclusively on your phone to list installed apps and audit their permissions. It never leaves your device.
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I scan an APK without installing it?</span>
+            <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Yes! That is one of AppLens's signature capabilities. You can download any <code>.apk</code> or <code>.xapk</code> file, open it inside AppLens, and view its declared permissions, target SDK, certificate signatures (v1 through v4), and AndroidManifest.xml before you risk installing it.
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does the Tech Framework Detector identify Flutter or Unity?</span>
+            <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            AppLens inspects native shared object libraries (<code>.so</code> files inside <code>/lib/</code>), class references in DEX bytecode, and asset manifests. Signatures like <code>libflutter.so</code> indicate Flutter, <code>libhermes.so</code> indicates React Native, and <code>libunity.so</code> indicates Unity.
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is AppLens safe for devices containing sensitive bank & work apps?</span>
+            <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Yes, 100%. AppLens is completely read-only for system analysis and has no internet permission, meaning it cannot access or transmit banking credentials or session tokens.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner Section -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+      <div class="cta-banner-card">
+        <div class="cta-banner-content">
+          <h2 class="cta-banner-title">Take Back Control of Your Android Privacy Today</h2>
+          <p class="cta-banner-sub">
+            Download AppLens now and see what your apps are really doing behind the scenes.
+          </p>
+
+          <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+            <a href="https://play.google.com/store/apps/details?id=com.applens" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a2.38 2.38 0 01-.61-1.64V3.454c0-.623.228-1.206.609-1.64zm11.597 11.598l2.585 2.586-13.37 7.72c-.146.084-.3.14-.457.172l11.242-10.478zm2.585-2.824L20.47 12l-2.679 1.412-2.39-2.39 2.39-2.434zM3.965 2.128L15.206 10.6 12.62 13.186 3.965 2.128z"/>
+              </svg>
+              Download on Google Play
+            </a>
+
+            <button class="btn btn-secondary btn-lg open-qr-modal">
+              Scan QR Code
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-icon-wrapper">
+              <img src="assets/images/app-logo.png" alt="AppLens Logo" width="40" height="40">
+            </div>
+            <div class="brand-text">App<span>Lens</span></div>
+          </div>
+          <p>
+            The on-device privacy guard &amp; APK inspector. Engineered with love for Android transparency, security, and developer productivity.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Features</h4>
+          <div class="footer-links">
+            <a href="#features" class="footer-link">App Inspector</a>
+            <a href="#features" class="footer-link">APK Analyzer</a>
+            <a href="#features" class="footer-link">Framework Detector</a>
+            <a href="#features" class="footer-link">Risk Score Calculator</a>
+            <a href="#pricing" class="footer-link">AppLens Pro Roadmap</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Resources</h4>
+          <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <a href="https://play.google.com/store/apps/details?id=com.applens" target="_blank" rel="noopener noreferrer" class="footer-link">Google Play Store</a>
+          <a href="mailto:app.solo.mayur@gmail.com" class="footer-link">Developer Support</a>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Contact &amp; Developer</h4>
+          <p style="font-size: 0.875rem; color: var(--text-sub); margin-bottom: 8px;">
+            Developed by <strong>Mayur</strong>
+          </p>
+          <a href="mailto:app.solo.mayur@gmail.com" class="footer-link" style="word-break: break-all;">
+            app.solo.mayur@gmail.com
+          </a>
+          <div style="margin-top: 16px;">
+            <span style="display: inline-block; padding: 4px 10px; background: var(--emerald-soft); color: var(--emerald); border-radius: var(--radius-sm); font-size: 0.75rem; font-weight: 600;">
+              🛡️ Zero Data Collected
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> AppLens. All rights reserved.
+        </div>
+        <div>
+          Crafted for Android &bull; 100% On-Device Execution
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- QR Code Modal -->
+  <div id="qr-modal" class="qr-modal" aria-hidden="true">
+    <div class="qr-modal-card">
+      <span id="qr-close-btn" class="close-btn">&times;</span>
+      <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Scan to Install AppLens</h3>
+      <p style="font-size: 0.85rem; color: var(--text-sub);">
+        Scan this QR code with your Android camera or Google Lens to open AppLens directly on Google Play.
+      </p>
+
+      <div class="qr-box">
+        <!-- SVG QR code pointing to https://play.google.com/store/apps/details?id=com.applens -->
+        <svg width="180" height="180" viewBox="0 0 25 25" fill="#000" style="display:block; margin: 0 auto;">
+          <!-- Corner top-left -->
+          <rect x="0" y="0" width="7" height="7" fill="#000"/>
+          <rect x="1" y="1" width="5" height="5" fill="#fff"/>
+          <rect x="2" y="2" width="3" height="3" fill="#000"/>
+          <!-- Corner top-right -->
+          <rect x="18" y="0" width="7" height="7" fill="#000"/>
+          <rect x="19" y="1" width="5" height="5" fill="#fff"/>
+          <rect x="20" y="2" width="3" height="3" fill="#000"/>
+          <!-- Corner bottom-left -->
+          <rect x="0" y="18" width="7" height="7" fill="#000"/>
+          <rect x="1" y="19" width="5" height="5" fill="#fff"/>
+          <rect x="2" y="20" width="3" height="3" fill="#000"/>
+          <!-- Timing patterns & Data blocks -->
+          <rect x="8" y="2" width="2" height="1" fill="#000"/>
+          <rect x="12" y="2" width="2" height="1" fill="#000"/>
+          <rect x="15" y="2" width="1" height="1" fill="#000"/>
+          <rect x="9" y="4" width="2" height="2" fill="#000"/>
+          <rect x="13" y="4" width="3" height="1" fill="#000"/>
+          <rect x="8" y="6" width="1" height="1" fill="#000"/>
+          <rect x="10" y="6" width="1" height="1" fill="#000"/>
+          <rect x="12" y="6" width="1" height="1" fill="#000"/>
+          <rect x="14" y="6" width="1" height="1" fill="#000"/>
+          <rect x="16" y="6" width="1" height="1" fill="#000"/>
+          <!-- Alignment -->
+          <rect x="8" y="9" width="2" height="2" fill="#000"/>
+          <rect x="12" y="9" width="2" height="3" fill="#000"/>
+          <rect x="16" y="9" width="3" height="2" fill="#000"/>
+          <rect x="2" y="9" width="3" height="2" fill="#000"/>
+          <rect x="4" y="13" width="2" height="2" fill="#000"/>
+          <rect x="8" y="14" width="4" height="2" fill="#000"/>
+          <rect x="14" y="13" width="2" height="3" fill="#000"/>
+          <rect x="18" y="12" width="3" height="2" fill="#000"/>
+          <rect x="22" y="10" width="2" height="3" fill="#000"/>
+          <rect x="9" y="18" width="2" height="3" fill="#000"/>
+          <rect x="13" y="18" width="3" height="2" fill="#000"/>
+          <rect x="18" y="16" width="2" height="3" fill="#000"/>
+          <rect x="21" y="16" width="3" height="2" fill="#000"/>
+          <rect x="10" y="22" width="3" height="2" fill="#000"/>
+          <rect x="15" y="22" width="4" height="2" fill="#000"/>
+          <rect x="21" y="21" width="3" height="3" fill="#000"/>
+        </svg>
+      </div>
+
+      <a href="https://play.google.com/store/apps/details?id=com.applens" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%;">
+        Open Play Store Directly
+      </a>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top-btn" class="back-to-top-btn" aria-label="Scroll back to top" title="Back to top">
+    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- Script to handle dynamic tabs inline or via main.js -->
+  <script>
+    function switchInteractiveTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-tab') === tabId);
+      });
+      document.querySelectorAll('.tab-panel').forEach(panel => {
+        panel.classList.toggle('active', panel.id === tabId);
+      });
+    }
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
